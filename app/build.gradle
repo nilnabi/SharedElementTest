@@ -21,6 +21,13 @@ android {
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
+    dataBinding {
+        enabled = true
+    }
+}
+
+kapt {
+    generateStubs = true
 }
 
 dependencies {
@@ -29,6 +36,9 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.android.support:design:23.4.0'
+
+    // Google Databinding
+    kapt "com.android.databinding:compiler:2.1.2"
 
     compile group: 'com.squareup.picasso', name: 'picasso', version: '2.5.2'
 }
