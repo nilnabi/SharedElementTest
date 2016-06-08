@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="name"
+            type="String" />
+        <variable
+            name="url"
+            type="String" />
+    </data>
+
+<RelativeLayout android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/first_image"
+        android:transitionName="@{name}"
+        android:layout_centerInParent="true"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:thumbnail_image_from_url="@{url}"
+        />
+
+</RelativeLayout>
+</layout>
